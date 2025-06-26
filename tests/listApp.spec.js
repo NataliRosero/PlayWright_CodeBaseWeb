@@ -1,7 +1,9 @@
 import { test, expect } from '@playwright/test';
 import { ListAplication, listAplication } from '../pages/listAplication'
+import path from 'path';
+import fs from 'fs';
 
-test('seleccionar aplicacion', async ({ page }) => {
+test('Ver y Seleccionar aplicacion del listado', async ({ page }, testInfo ) => {
 
     const listApp = new ListAplication(page)
 
@@ -15,5 +17,17 @@ test('seleccionar aplicacion', async ({ page }) => {
     //imprime la url final donde se muestra el listado de aplicaciones
     await listApp.printCurrentUrl();
 
+      // Carpeta donde se crean evidencias
+    const folderPath = path.resolve('docs/evidencias');
+
+    // Captura de pantalla
+    const screenshotPath = path.join(folderPath, 'ListadoAPlicaciones-exitoso.png');
+    await page.screenshot({ path: screenshotPath, fullPage: true });
+
+    // Adjuntar video si está disponible en el reporte
+    if (testInfo.video) {
+        const videoPath = path.join(folderPath, 'ListadoAPlicaciones.mp4');
+        await testInfo.attach('video', { path: videoPath, contentType: 'video/mp4' });
+    }
 
 });
