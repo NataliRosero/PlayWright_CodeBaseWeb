@@ -33,6 +33,7 @@ Las capturas y videos se guardan en la carpeta del proyecto docs/evidencias/ con
 docs/evidencias/
 ├── ListadoAPlicaciones-exitoso.png
 └── Video.webm
+└── EvidenciaConsola.png (este es el resultado de las 3 primeras aplicaciones filtradas en el listado mostrado y la url exacta de donde se encuentra este listado)
 
 ## 🗂 Estructura del proyecto
       PlayWright_CodeBaseWeb/
