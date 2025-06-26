@@ -25,7 +25,7 @@ npx playwright install
 ## 🏃‍♂️ Ejecutar las pruebas
 npx playwright test
 
-## 📋 Generar reporte con evidencias
+## 📋 Generar reporte con evidencias (aqui se puede ver el video de la ejecución y los datos del resultado que se imprimen en la consola al finalizar el test)
 npx playwright show-report
 
 ## 🧪 Evidencias (screenshots + videos)
